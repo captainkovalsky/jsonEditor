@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="jsonApp">
+    <head>
+        <meta charset="utf-8" />
+        <title>AngularJS Plunker</title>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script  src="bower_components/angular/angular.js"></script>
+        <!-- <link rel="stylesheet" href="style.css" /> -->
+        <link  href="bower_components/bootstrap/dist/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="app.js"></script>
+        <script src="directives/render-json-editor-directive.js"></script>
+        <script src="directives/text-value-directive.js"></script>
+        <script src="directives/number-value-directive.js"></script>
+    </head>
+    <body ng-controller="MainCtrl">
+<div><pre>
+    {{myJSON | json}}
+</pre></div>
+
+        <p>Hello {{name}}!</p>
+        <render-json-editor json="myJSON">
+             <text-value></text-value>
+        </render-json-editor>
+    </body>
+</html>
